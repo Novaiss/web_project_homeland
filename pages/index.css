@@ -1,0 +1,10 @@
+/* Importe primeiro normalize.css e fonts.css */
+@import url('../vendor/normalize.css');
+@import url('../vendor/fonts.css');
+
+/* Depois seus estilos personalizados */
+body {
+  font-family: 'Minha Fonte', sans-serif;
+  margin: 0;
+  background: #f5f5f5;
+}

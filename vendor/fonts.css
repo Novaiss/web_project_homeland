@@ -1,0 +1,5 @@
+/* Exemplo: importação de fontes locais */
+@font-face {
+    font-family: 'Minha Fonte';
+    src: url('./fonts/minha-fonte.woff2') format('woff2');
+  }
