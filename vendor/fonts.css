@@ -1,5 +1,10 @@
-/* Exemplo: importação de fontes locais */
 @font-face {
-    font-family: 'Minha Fonte';
-    src: url('./fonts/minha-fonte.woff2') format('woff2');
-  }
+  font-family: "Inter";
+  src: url("./fonts/Inter-Regular.woff2") format("woff2");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./fonts/Inter-Bold.woff2") format("woff2");
+  font-weight: 700;
+}

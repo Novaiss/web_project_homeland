@@ -1,10 +1,151 @@
-/* Importe primeiro normalize.css e fonts.css */
-@import url('../vendor/normalize.css');
-@import url('../vendor/fonts.css');
+@import url("../vendor/normalize.css");
+@import url("../vendor/fonts.css");
 
-/* Depois seus estilos personalizados */
-body {
-  font-family: 'Minha Fonte', sans-serif;
+@import url("../blocks/page.css");
+@import url("../blocks/header.css");
+@import url("../blocks/lead.css");
+@import url("../blocks/intro.css");
+@import url("../blocks/footer.css");
+@import url("../blocks/content.css");
+
+/* Exemplo para .intro__title */
+.intro__title {
+  font-size: 32px; /* Mobile */
+}
+
+@media (min-width: 768px) {
+  .intro__title {
+    font-size: 42px; /* Tablet */
+  }
+}
+
+@media (min-width: 1280px) {
+  .intro__title {
+    font-size: 54px; /* Desktop */
+  }
+}
+* {
   margin: 0;
-  background: #f5f5f5;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #2a2c2f;
+  width: 100%;
+}
+
+.page {
+  max-width: 1280px;
+  margin: 0 auto;
+  background: #2a2c2f;
+  color: white;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+}
+
+.header__logo {
+  max-width: 254px;
+  width: 100%;
+  padding: 34px 0;
+}
+
+/* Lead Section */
+.lead {
+  max-width: 984px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lead__title {
+  font-size: 40px;
+  line-height: 1.2;
+  text-align: center;
+  margin: 20px 0;
+  max-width: 90%;
+}
+
+.lead__subtitle {
+  font-size: 18px;
+  line-height: 1.3;
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.lead__image {
+  width: 100%;
+  max-width: 984px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+/* Intro Section */
+.intro {
+  max-width: 984px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.intro__title,
+.intro__text-phrase,
+.intro__text-reference,
+.intro__text-introduction {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px 0;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-size: 12px;
+  margin: 0 auto;
+}
+
+/* ========== TABLET (768px+) ========== */
+@media (min-width: 768px) {
+  .lead__title {
+    font-size: 60px;
+  }
+
+  .lead__subtitle {
+    font-size: 24px;
+  }
+
+  .intro {
+    padding: 0 40px;
+  }
+}
+
+/* ========== DESKTOP (1280px+) ========== */
+@media (min-width: 1280px) {
+  .lead__title {
+    font-size: 96px;
+    line-height: 100px;
+  }
+
+  .lead__subtitle {
+    font-size: 30px;
+    margin-bottom: 64px;
+  }
+
+  .intro {
+    padding-right: 154px;
+  }
+
+  .intro__text-introduction {
+    max-width: 722px;
+  }
 }

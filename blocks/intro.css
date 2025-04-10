@@ -1,0 +1,36 @@
+.intro {
+  max-width: 984px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.intro__title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.intro__text-phrase,
+.intro__text-reference,
+.intro__text-introduction {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .intro__title {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .intro {
+    padding-right: 154px;
+  }
+  .intro__title {
+    font-size: 54px;
+  }
+  .intro__text-introduction {
+    max-width: 722px;
+  }
+}

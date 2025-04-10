@@ -1,0 +1,9 @@
+.footer {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer__copyright {
+  font-size: 12px;
+  margin: 0 auto;
+}
