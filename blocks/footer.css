@@ -1,9 +1,11 @@
 .footer {
-  padding: 20px 0;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 92px;
 }
 
 .footer__copyright {
-  font-size: 12px;
-  margin: 0 auto;
+  font-weight: 400;
+  font-size: 14px;
 }
