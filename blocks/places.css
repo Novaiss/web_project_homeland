@@ -5,6 +5,162 @@ margin:  auto;
 }
 
 .places__item{
-display: grid;
+  display: grid;
 grid-template-columns: repeat(2, 1fr);
+grid-template-rows: auto 460px auto;
+grid-template-areas:
+    "title artist"
+    "image paragraph"
+    "button paragraph";
 
+}
+
+.places__title {
+  grid-area: title;
+  font-size: 72px;
+  line-height: 76px;
+  font-weight: 900;
+  max-width: 460px;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.places__image {
+ grid-area: image;
+ width: 460px;
+ height: 460px;
+ box-shadow: 10px 10px 25px 0px #000000;
+}
+
+.places__button {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  margin-top: 48px;
+  width: 355px;
+  height: 48px;
+  background: linear-gradient(90deg, #0278fe 0%, #003a7b 99.98%);
+  box-shadow: 10px 10px 25px 0px #000000;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.places__button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(2, 120, 254, 0.25) 0%,
+    rgba(0, 58, 123, 0.25) 99.98%
+  );
+}
+
+
+.places__website {
+  grid-area: artist;
+  align-self: end;
+  margin-bottom: 40px;
+  margin-left: 40px;
+}
+
+.places__artists{
+  max-width: 58px;
+  text-transform: uppercase;
+  color: #aaaaaa;
+  font-size: 12px;
+  font-weight: 400;
+
+}
+
+.places__text {
+  grid-area: paragraph;
+  max-width: 484px;
+  margin-left: 40px;
+}
+
+.places__paragraph{
+  font-size: 18px;
+  line-height: 1.63;
+  font-weight: 400;
+
+}
+
+@media (max-width: 1100px) {
+  .places {
+    max-width: 720px;
+  }
+
+  .places__item {
+    grid-template-rows: auto 340px auto;
+  }
+
+  .places__title {
+    font-size: 42px;
+    line-height: 46px;
+    max-width: 340px;
+  }
+
+  .places__image {
+    width: 340px;
+    height: 340px;
+  }
+
+  .places__paragraph {
+    max-width: 352px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 544px) {
+  .places {
+    max-width: 320px;
+  }
+
+  .places__item {
+    margin: 0;
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: auto;
+    grid-template-areas:
+      "title"
+      "artist"
+      "image"
+      "paragraph"
+      "button";
+  }
+
+  .places__title {
+    font-size: 32px;
+    line-height: 35px;
+    max-width: 288px;
+    margin: 62px 16px 0;
+  }
+  .places__website {
+    margin: 0 16px 30px;
+  }
+
+  .places__image {
+    width: 320px;
+    height: 320px;
+  }
+
+  .places__button {
+    max-width: 288px;
+    height: 48px;
+    text-align: center;
+    font-size: 14px;
+    margin: 0 16px;
+  }
+
+  .places__text {
+    margin: 0 16px;
+  }
+
+  .places__paragraph {
+    max-width: 288px;
+    font-size: 16px;
+    margin: 30px 16px;
+  }
+}
